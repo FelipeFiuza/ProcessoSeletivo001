@@ -5,12 +5,12 @@ void main(void){
     int *v, qtde, i = 0, testMenor = 0, menor = 1;
 
 
-    //Define quantidade de números que serão inseridos
+    //Define quantidade de nÃºmeros que serÃ£o inseridos
 	scanf("%i", &qtde);
 
     v = malloc(qtde*sizeof(int));
 
-    //Recebe os números
+    //Recebe os nÃºmeros
     while(i < qtde){
         scanf("%i", &v[i]);
         i++;
@@ -20,13 +20,12 @@ void main(void){
     while(testMenor == 0)
     {
         /*Testa se o numero candidato a menor inteiro nao presente na array
-        está de fato ausente da array*/
+        estÃ¡ de fato ausente da array*/
         while(menor != v[i] && i < qtde){
-            printf("%i != %i && %i < %i\n", menor, v[i], i, qtde);
             i++;
         }
 
-        /*Testa se a saída do laço anterior foi por ter encontrado o numero
+        /*Testa se a saÃ­da do laÃ§o anterior foi por ter encontrado o numero
         na array ou por ter terminado de rodar a array*/
         if(menor == v[i]){
             menor++;
